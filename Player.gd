@@ -1,12 +1,19 @@
 extends KinematicBody
 
-var run_speed = 8.0
+var run_speed : float
+var gravity : float
+var jump_speed : float
 var time : float = 0.0
 var step_freq : float = 2.0 #kuinka usein
 var step_height : float = 0.2 # kuinka korkealle maasta
 var step_tilt : float = 8.0 #degrees asteet
 
 onready var body_hinge = $BodyHinge
+
+func setup_junp(length : float, height : float, speed : float):
+	run_speed = speed
+	gravity = 8.0 * height * speed * speed / (length * length)
+	jump_speed = 4.0 * height * speed / length
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -30,9 +37,9 @@ func _physics_process(delta):
 	var sideways : float = 0.0
 	
 	if Input.is_action_pressed("move_right"):
-		sideways += 1.0
+		sideways += -1.0
 		
 	if Input.is_action_pressed("move_left"):
-		sideways -= 1.0
+		sideways -= -1.0
 	
 	move_and_slide(Vector3(sideways * run_speed, 0, run_speed))
