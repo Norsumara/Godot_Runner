@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/fance.obj-35483c80e83571244b886e012199eace.mesh"
+
+[deps]
+
+files=[ "res://.import/fance.obj-35483c80e83571244b886e012199eace.mesh" ]
+
+source_file="res://Assets/Models/steel fence/fance.obj"
+dest_files=[ "res://.import/fance.obj-35483c80e83571244b886e012199eace.mesh", "res://.import/fance.obj-35483c80e83571244b886e012199eace.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

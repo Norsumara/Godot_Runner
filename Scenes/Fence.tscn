@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Models/steel fence/fance.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Fence" type="Spatial"]
+
+[node name="fance2" type="MeshInstance" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+mesh = ExtResource( 1 )
+skeleton = NodePath("")
+
+[node name="StaticBody" type="StaticBody" parent="fance2"]
+collision_layer = 4
+
+[node name="CollisionShape" type="CollisionShape" parent="fance2/StaticBody"]
+transform = Transform( 7.37808, 0, 0, 0, 5.32445, 0, 0, 0, 1, 0, 5.9251, 0 )
+shape = SubResource( 1 )
