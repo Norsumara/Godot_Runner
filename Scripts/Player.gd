@@ -16,7 +16,7 @@ onready var body_hinge = $BodyHinge
 func setup_jump(length : float, height : float, speed : float):
 	run_speed = speed
 	gravity = 8.0 * height * speed * speed / (length * length)
-	jump_speed = 4.0 * height * speed / length
+	jump_speed = 6.0 * height * speed / length
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -53,3 +53,10 @@ func _physics_process(delta):
 	velocity.z = -run_speed
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
+	
+	for index in range(get_slide_count()):
+		var collision = get_slide_collision(index)
+		var collision_object = collision.collider as CollisionObject
+		if collision_object.collision_layer & 4:
+			print ("Perkutti")
+			get_tree().reload_current_scene()
