@@ -5,6 +5,12 @@
 
 [node name="RoadBase" instance=ExtResource( 1 )]
 
+[node name="GuardRailRight" parent="Grass/Sand/Colliders" index="0"]
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="GuardRailRight2" parent="Grass/Sand/Colliders" index="1"]
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0 )
+
 [node name="fance" type="MeshInstance" parent="." index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01381, 5.26919, -0.408736 )
 mesh = ExtResource( 2 )
@@ -33,10 +39,6 @@ mesh = ExtResource( 2 )
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.78334, 1.01555, 14.8978 )
 mesh = ExtResource( 2 )
 
-[node name="fance8" type="MeshInstance" parent="." index="8"]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.50042, 1.01555, 21.5841 )
-mesh = ExtResource( 2 )
-
-[node name="fance9" type="MeshInstance" parent="." index="9"]
+[node name="fance9" type="MeshInstance" parent="." index="8"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.50042, 1.01555, -14.1911 )
 mesh = ExtResource( 2 )

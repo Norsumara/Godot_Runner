@@ -5,6 +5,15 @@
 
 [node name="Road1" instance=ExtResource( 1 )]
 
+[node name="Grass" parent="." index="0"]
+transform = Transform( 4.20733, 0, 0, 0, 1, 0, 0, 0, 1, -1.55, 0, 0 )
+
+[node name="GuardRailRight" parent="Grass/Sand/Colliders" index="0"]
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="GuardRailRight2" parent="Grass/Sand/Colliders" index="1"]
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0 )
+
 [node name="Obstacles" type="Spatial" parent="." index="1"]
 
 [node name="Fence" parent="Obstacles" index="0" instance=ExtResource( 2 )]

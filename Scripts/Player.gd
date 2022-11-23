@@ -9,7 +9,7 @@ var velocity := Vector3()
 var time : float = 0.0
 var step_freq : float = 2.0 #kuinka usein
 var step_height : float = 0.2 # kuinka korkealle maasta
-var step_tilt : float = 8.0 #degrees asteet
+var step_tilt : float = 6.0 #degrees asteet
 
 onready var body_hinge = $BodyHinge 
 
