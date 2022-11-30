@@ -8,16 +8,16 @@
 [node name="Grass" parent="." index="0"]
 transform = Transform( 4.20733, 0, 0, 0, 1, 0, 0, 0, 1, -1.55, 0, 0 )
 
-[node name="GuardRailRight" parent="Grass/Sand/Colliders" index="0"]
-transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0 )
+[node name="Colliders" parent="Grass/Sand" index="0"]
+transform = Transform( 4.207, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="GuardRailRight2" parent="Grass/Sand/Colliders" index="1"]
-transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0 )
+[node name="GroundCollider" parent="Grass/Sand/Colliders" index="2"]
+transform = Transform( 0.238, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Obstacles" type="Spatial" parent="." index="1"]
 
 [node name="Fence" parent="Obstacles" index="0" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.699275, 22 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.699275, 14.151 )
 
 [node name="Fence2" parent="Obstacles" index="1" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92249, 0.699275, 8.25768 )
@@ -29,10 +29,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92249, 0.699275, -10.3131 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174061, 0.699275, -10.3131 )
 
 [node name="Fence5" parent="Obstacles" index="4" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01169, 0.699275, -19.6001 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01169, 0.699275, -6.35781 )
 
 [node name="Fence6" parent="Obstacles" index="5" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.323309, 0.699275, -23.063 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.323309, 0.699275, 2.33661 )
 
 [node name="Fence7" parent="Obstacles" index="6" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61408, 0.699275, -23.063 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61408, 0.699275, -0.714745 )

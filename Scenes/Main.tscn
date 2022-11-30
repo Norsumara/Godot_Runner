@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/RoadStart.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Road1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/new_environment.tres" type="Environment" id=6]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 4 )
@@ -17,7 +18,7 @@ transform = Transform( 0.766045, 0.492403, 0.413176, -5.61943e-08, -0.642788, 0.
 shadow_color = Color( 0, 0.952941, 1, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.999718, 0.0237517, -8.74228e-08, 0.0237517, 0.999718, 0, 8.73981e-08, -2.07644e-09, -1, -3.44095, 4.7352, 24.1916 )
+transform = Transform( -0.999718, 0.0237517, -8.74228e-08, 0.0237517, 0.999718, 0, 8.73981e-08, -2.07644e-09, -1, 0, 4.735, 0 )
 script = ExtResource( 3 )
 
 [node name="Road1" parent="." instance=ExtResource( 5 )]
@@ -29,3 +30,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.477, 12.546, 50 )
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
 transform = Transform( 1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 5, 7 )
+environment = ExtResource( 6 )
+far = 8192.0
