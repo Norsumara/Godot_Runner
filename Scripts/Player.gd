@@ -26,8 +26,6 @@ func setup_jump(length : float, height : float, speed : float):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -58,6 +56,6 @@ func _physics_process(delta):
 	for index in range(get_slide_count()):
 		var collision = get_slide_collision(index)
 		var collision_object = collision.collider as CollisionObject
-		if collision_object.collision_layer & 4:
+		if collision_object.collision_layer & 4 and rad2deg(collision.get_angle()) > 60:
 			print (collision.collider.name)
 			get_tree().reload_current_scene()

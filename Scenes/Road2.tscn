@@ -11,26 +11,22 @@ transform = Transform( 4.207, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0 )
 [node name="GroundCollider" parent="Grass/Sand/Colliders" index="2"]
 transform = Transform( 0.238, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="fance" type="MeshInstance" parent="." index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.865175, -3.92063, -4.54963 )
-mesh = ExtResource( 2 )
-
-[node name="fance4" type="MeshInstance" parent="." index="2"]
+[node name="fance4" type="MeshInstance" parent="." index="1"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.918362, 0.897047, 8.16366 )
 mesh = ExtResource( 2 )
 
-[node name="fance5" type="MeshInstance" parent="." index="3"]
+[node name="fance5" type="MeshInstance" parent="." index="2"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.12498, 0.952818, 10.7977 )
 mesh = ExtResource( 2 )
 
-[node name="fance6" type="MeshInstance" parent="." index="4"]
+[node name="fance6" type="MeshInstance" parent="." index="3"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.12498, 0.952818, 5.38393 )
 mesh = ExtResource( 2 )
 
-[node name="fance7" type="MeshInstance" parent="." index="5"]
+[node name="fance7" type="MeshInstance" parent="." index="4"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.12498, 0.952818, -14.2712 )
 mesh = ExtResource( 2 )
 
-[node name="fance8" type="MeshInstance" parent="." index="6"]
+[node name="fance8" type="MeshInstance" parent="." index="5"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.11868, 0.952826, -7.38312 )
 mesh = ExtResource( 2 )

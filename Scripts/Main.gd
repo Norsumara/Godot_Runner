@@ -2,8 +2,8 @@ extends Spatial
 
 
 var run_speed : float = 8.0
-var jump_length : float = 5.5
-var jump_height : float = 8
+var jump_length : float = 3
+var jump_height : float = 4
 
 var initial_road_count :int = 5
 var road_scenes = [
@@ -16,6 +16,7 @@ onready var player = $Player
 onready var camera_pivot = $CameraPivot
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_tree().paused = true
 	player.setup_jump(jump_length, jump_height, run_speed)
 	randomize()
 	
@@ -44,3 +45,7 @@ func make_random_road() -> RoadBase:
 	var road_scene = road_scenes[randi() % road_scenes.size()]
 	var road = road_scene.instance()
 	return road
+
+
+func _on_StartScreen_dismissed():
+	get_tree().paused = false
