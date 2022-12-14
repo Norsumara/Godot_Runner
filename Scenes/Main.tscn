@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/RoadStart.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Road1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/new_environment.tres" type="Environment" id=6]
 [ext_resource path="res://UI/StartScreen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/GameOverScreen.tscn" type="PackedScene" id=8]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 4 )
@@ -35,7 +36,13 @@ environment = ExtResource( 6 )
 far = 8192.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
 
 [node name="StartScreen" parent="CanvasLayer" instance=ExtResource( 7 )]
 
+[node name="StartScreen2" parent="CanvasLayer" instance=ExtResource( 8 )]
+visible = false
+
+[connection signal="obstacle_hit" from="Player" to="." method="_on_Player_obstacle_hit"]
 [connection signal="dismissed" from="CanvasLayer/StartScreen" to="." method="_on_StartScreen_dismissed"]
+[connection signal="dismissed" from="CanvasLayer/StartScreen2" to="." method="_on_StartScreen2_dismissed"]

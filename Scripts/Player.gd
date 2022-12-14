@@ -1,5 +1,7 @@
 extends KinematicBody
 
+signal obstacle_hit
+
 var run_speed : float
 var gravity : float
 var jump_speed : float
@@ -57,5 +59,4 @@ func _physics_process(delta):
 		var collision = get_slide_collision(index)
 		var collision_object = collision.collider as CollisionObject
 		if collision_object.collision_layer & 4 and rad2deg(collision.get_angle()) > 60:
-			print (collision.collider.name)
-			get_tree().reload_current_scene()
+			emit_signal("obstacle_hit")
